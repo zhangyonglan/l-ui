@@ -1,0 +1,145 @@
+/* 淘宝官网样式初始化
+     ========================================================================== */
+
+     body,
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6,
+     hr,
+     p,
+     blockquote,
+     dl,
+     dt,
+     dd,
+     ul,
+     ol,
+     li,
+     pre,
+     form,
+     fieldset,
+     legend,
+     button,
+     input,
+     textarea,
+     th,
+     td {
+       margin: 0;
+       padding: 0;
+     }
+     
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6 {
+       font-size: 100%;
+     }
+     
+     address,
+     cite,
+     dfn,
+     em,
+     var {
+       font-style: normal;
+     }
+     
+     code,
+     kbd,
+     pre,
+     samp {
+       font-family: couriernew, courier, monospace;
+     }
+     
+     small {
+       font-size: 12px;
+     }
+     
+     ul,
+     ol {
+       list-style: none;
+     }
+     
+     a {
+       text-decoration: none;
+     }
+     
+     a:hover,
+     a:focus {
+       text-decoration: none;
+     }
+     
+     sup {
+       vertical-align: text-top;
+     }
+     
+     sub {
+       vertical-align: text-bottom;
+     }
+     
+     legend {
+       color: #000;
+     }
+     
+     fieldset,
+     img {
+       border: 0;
+     }
+     
+     button,
+     input,
+     select,
+     textarea {
+       font-size: 100%;
+     }
+     
+     table {
+       border-collapse: collapse;
+       border-spacing: 0;
+     }
+     
+     /* core css
+          ========================================================================== */
+     
+     * {
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+     }
+     
+     *:before,
+     *:after {
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+     }
+     
+     html {
+       font-size: 10px;
+       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+     }
+     
+     body {
+       font-family: "MicrosoftYaHei", Helvetica, Arial, sans-serif;
+       font-size: 14px;
+       line-height: 1.42857143;
+       color: #333;
+       background-color: #fff;
+     }
+     
+     img {
+       vertical-align: middle;
+     }
+     
+     /* 高度自适应屏幕*/
+     
+     html,
+     body,
+     #app {
+       height: 100%;
+       padding: 0!important;
+     }
+     
