@@ -1,8 +1,7 @@
 const path = require('path')
-function resolve(dir) {
-    return path.join(__dirname, dir)
+function resolve (dir) {
+  return path.join(__dirname, dir)
 }
-//vue markdown的options配置
 const MarkdownItContainer = require('markdown-it-container')
 const MarkdownItCheckBox = require('markdown-it-task-checkbox')
 const MarkdownItDec = require('markdown-it-decorate')
@@ -50,30 +49,30 @@ const vueMarkdown = {
     [MarkdownItDec]
   ]
 }
-//导出配置
 module.exports = {
-    // 修改 src 目录 为 examples 目录
-    pages: {
-        index: {
-            entry: 'examples/main.js',
-            template: 'public/index.html',
-            filename: 'index.html'
-        }
+  lintOnSave: false,
+  publicPath: './',
+  // 修改 src 目录 为 examples 目录
+  pages: {
+    index: {
+      entry: 'examples/main.js',
+      template: 'public/index.html',
+      filename: 'index.html'
     },
-    // 扩展 webpack 配置，使 packages 加入编译
-    chainWebpack: config => {
-        config.resolve.alias
-            .set('@', resolve('examples'))
-        
-        config.module
-            .rule('md')
-            .test(/\.md/)
-            .use('vue-loader')
-            .loader('vue-loader')
-            .end()
-            .use('vue-markdown-loader')
-            .loader('vue-markdown-loader/lib/markdown-compiler')
-            .options(vueMarkdown)
-
-    }
+  },
+  // 扩展 webpack 配置，使 packages 加入编译
+  chainWebpack: config => {
+    config.resolve.alias
+      .set('@', resolve('examples'))
+      .set('@mobile', resolve('examples/mobile'))
+    config.module
+      .rule('md')
+      .test(/\.md/)
+      .use('vue-loader')
+      .loader('vue-loader')
+      .end()
+      .use('vue-markdown-loader')
+      .loader('vue-markdown-loader/lib/markdown-compiler')
+      .options(vueMarkdown)
+  }
 }

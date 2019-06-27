@@ -1,20 +1,20 @@
 <template>
   <div class="page-header">
     <img class="logo" src="@/assets/images/logo.png" alt>
-    <div>
-
-    </div>
+    <div></div>
   </div>
 </template>
 <script>
 export default {
-  data() {}
+  data() {
+    return {};
+  }
 };
 </script>
 <style lang="scss" scoped>
-.logo{
-    width:100px;
-    margin-left: 50px;
+.logo {
+  width: 100px;
+  margin-left: 50px;
 }
 .page-header {
   position: fixed;

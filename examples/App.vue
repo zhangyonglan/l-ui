@@ -2,9 +2,7 @@
   <div id="app">
     <page-header class="page-header"></page-header>
     <div class="container">
-      <!-- <el-scrollbar> -->
       <side-nav class="nav"></side-nav>
-      <!-- </el-scrollbar> -->
       <router-view class="view"/>
     </div>
     <!-- <page-footer></page-footer> -->

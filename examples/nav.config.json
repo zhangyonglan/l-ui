@@ -2,10 +2,6 @@
     "开发指南": [
         {
             "name": "introduce",
-            "path": "/"
-        },
-        {
-            "name": "introduce",
             "path": "/introduce",
             "desc": "介绍"
         },
@@ -18,17 +14,20 @@
             "name": "contribute",
             "path": "/contribute",
             "desc": "开发指南"
+        },
+        {
+            "name": "standard",
+            "path": "/standard",
+            "desc": "开发规范"
         }
     ],
     "组件": [
         {
             "desc": "基础组件",
-            "isMobile": "1",
             "items": [
                 {
                     "desc": "Icon 图标",
                     "name": "icon",
-                    "isMobile": "1",
                     "path": "/icon"
                 }
             ]
