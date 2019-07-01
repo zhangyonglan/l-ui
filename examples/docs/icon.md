@@ -8,16 +8,16 @@
 <!-- {.md} -->
 
 方式一：<!-- {.md} -->
-通过<!-- {.md} -->`vue-cards-icon`标签来引用
+通过<!-- {.md} -->`l-icon`标签来引用
 
 <!-- <icon-demo></icon-demo> -->
 
 ::: demo
 
 ```html
-<vue-cards-icon name="cards-playing-outline" :size="16"></vue-cards-icon>
-<vue-cards-icon name="cards" :size="16"></vue-cards-icon>
-<vue-cards-icon name="close" :size="16"></vue-cards-icon>
+<l-icon name="cards-playing-outline" :size="16"></l-icon>
+<l-icon name="cards" :size="16"></l-icon>
+<l-icon name="close" :size="16"></l-icon>
 ```
 
 :::

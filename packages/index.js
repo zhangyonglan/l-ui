@@ -1,19 +1,11 @@
-import Button from './Button/index.js';
+import Button from './button';
+import Icon from './icon';
 
-const components = [
-    Button
-]
+const components = [Button, Icon];
 
 const install = function (Vue) {
     if (install.installed) return;
     components.map(component => Vue.component(component.name, component));
 }
 
-if (typeof window !== 'undefined' && window.Vue) {
-    install(window.Vue);
-}
-
-export default {
-    install,
-    Button
-}
+export default install;

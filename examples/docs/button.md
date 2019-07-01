@@ -8,43 +8,43 @@
 ### 基本用法
 :::demo
 ```html
-<bee-button>default</bee-button>
-<bee-button theme='primary'>primary</bee-button>
-<bee-button theme='success'>success</bee-button>
-<bee-button theme='error'>error</bee-button>
+<l-button>default</l-button>
+<l-button type='primary'>primary</l-button>
+<l-button type='success'>success</l-button>
+<l-button type='error'>error</l-button>
 ```
 :::
 
 ### 启用动画效果
 :::demo
 ``` html
-<bee-button :animation='true'>default</bee-button>
-<bee-button theme='primary' :animation='true'>primary</bee-button>
-<bee-button theme='success' :animation='true'>success</bee-button>
-<bee-button theme='error' :animation='true'>error</bee-button>
+<l-button :animation='true'>default</l-button>
+<l-button type='primary' :animation='true'>primary</l-button>
+<l-button type='success' :animation='true'>success</l-button>
+<l-button type='error' :animation='true'>error</l-button>
 ```
 :::
 
 ### 禁用状态
 :::demo
 ``` html
-<bee-button disabled>default</bee-button>
-<bee-button theme='primary' disabled>primary</bee-button>
-<bee-button theme='success' disabled>success</bee-button>
-<bee-button theme='error' disabled>error</bee-button>
+<l-button disabled>default</l-button>
+<l-button type='primary' disabled>primary</l-button>
+<l-button type='success' disabled>success</l-button>
+<l-button type='error' disabled>error</l-button>
 ```
 :::
 
 ### 大小
 :::demo
 ``` html
-<bee-button size='sm'>default</bee-button>
-<bee-button>default</bee-button>
-<bee-button size='lg'>default</bee-button>
+<l-button size='sm'>default</l-button>
+<l-button>default</l-button>
+<l-button size='lg'>default</l-button>
 
-<bee-button theme='primary' size='sm'>default</bee-button>
-<bee-button theme='primary'>default</bee-button>
-<bee-button theme='primary' size='lg'>default</bee-button>
+<l-button type='primary' size='sm'>default</l-button>
+<l-button type='primary'>default</l-button>
+<l-button type='primary' size='lg'>default</l-button>
 ```
 :::
 
@@ -52,7 +52,7 @@
 
 | 参数 | 说明 |	类型 |	可选值 |	默认值 |
 |---|---|---|---|---|
-| theme | 按钮的类型 |	string |	default,primary,success, error |	default |
+| type | 按钮的类型 |	string |	default,primary,success, error |	default |
 | size | 按钮的大小 |	string |	sm,lg |	null |
 | animation | 是否启用动画效果 |	boolean |	- |	false |
 | disabled | 是否禁用 |	boolean |	- |	false |
