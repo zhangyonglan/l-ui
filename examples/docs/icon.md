@@ -10,7 +10,7 @@
 方式一：<!-- {.md} -->
 通过<!-- {.md} -->`vue-cards-icon`标签来引用
 
-<icon-demo></icon-demo>
+<!-- <icon-demo></icon-demo> -->
 
 ::: demo
 
