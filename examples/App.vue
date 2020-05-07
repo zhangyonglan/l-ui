@@ -3,7 +3,10 @@
     <page-header class="page-header"></page-header>
     <div class="container">
       <side-nav class="nav"></side-nav>
-      <router-view class="view"/>
+      <div>
+        <bread-crumb></bread-crumb>
+        <router-view class="view" />
+      </div>
     </div>
     <!-- <page-footer></page-footer> -->
   </div>
@@ -32,13 +35,13 @@ export default {
   .nav {
     float: left;
     width: 210px;
-    height:100%;
+    height: 100%;
     overflow: auto;
   }
   .view {
     float: left;
     width: calc(100% - 215px);
-    height:100%;
+    height: 100%;
     padding: 32px 48px 48px;
     box-sizing: border-box;
     overflow: auto;

@@ -2,25 +2,19 @@
   <div class="demo-block">
     <div class="demo-block-source">
       <slot name="source"></slot>
-      <span class="demo-block-code-icon"
-        v-if="!$slots.default"
-        @click="showCode=!showCode">
-          <span v-if='!showCode'>查看代码</span>
-          <span v-else>收起代码</span>
-        </span>
-    </div>
-    <div class="demo-block-meta"
-      v-if="$slots.default">
-      <slot></slot>
-      <span v-if="$slots.default"
-        class="demo-block-code-icon"
-        @click="showCode=!showCode">
-          <span v-if='!showCode'>查看代码</span>
-          <span v-else>收起代码</span>
+      <span class="demo-block-code-icon" v-if="!$slots.default" @click="showCode=!showCode">
+        <span v-if="!showCode">查看代码</span>
+        <span v-else>收起代码</span>
       </span>
     </div>
-    <div class="demo-block-code"
-      v-show="showCode">
+    <div class="demo-block-meta" v-if="$slots.default">
+      <slot></slot>
+      <span v-if="$slots.default" class="demo-block-code-icon" @click="showCode=!showCode">
+        <span v-if="!showCode">查看代码</span>
+        <span v-else>收起代码</span>
+      </span>
+    </div>
+    <div class="demo-block-code" v-show="showCode">
       <slot name="highlight"></slot>
     </div>
   </div>
@@ -28,13 +22,13 @@
 
 <script type="text/babel">
 export default {
-  name: 'DemoBlock',
-  data () {
+  name: "DemoBlock",
+  data() {
     return {
       showCode: false
-    }
+    };
   }
-}
+};
 </script>
 <style lang='less'>
 .demo-block {
@@ -89,11 +83,19 @@ export default {
   }
 
   .demo-block-source {
-    border-bottom: 1px solid #ebedf0;
+    // border: 1px solid #ebedf0;
     padding: 20px 24px 20px;
     color: #444;
     position: relative;
     margin-bottom: -1px;
+    // border: 1px solid #ebebeb;
+    border-radius: 3px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  .demo-block-source:hover {
+    box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6),
+      0 2px 4px 0 rgba(232, 237, 250, 0.5);
   }
   .demo-block-meta {
     position: relative;

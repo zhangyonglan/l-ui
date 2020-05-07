@@ -3,7 +3,19 @@
         {
             "name": "introduce",
             "path": "/introduce",
-            "desc": "介绍"
+            "desc": "介绍",
+            "children": [
+                {
+                    "name": "introduce",
+                    "path": "/installation",
+                    "desc": "介绍1"
+                }
+            ]
+        },
+        {
+            "name": "installation",
+            "path": "/installation",
+            "desc": "安装"
         },
         {
             "name": "start",
@@ -34,6 +46,15 @@
                     "desc": "Button 按钮",
                     "name": "button",
                     "path": "/button"
+                }
+            ]
+        },{
+            "desc": "业务组件",
+            "items": [
+                {
+                    "desc": "搜索条件组件",
+                    "name": "listSearch",
+                    "path": "/listSearch"
                 }
             ]
         }

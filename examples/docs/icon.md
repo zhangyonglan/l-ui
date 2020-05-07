@@ -1,32 +1,37 @@
 # Icon 图标
 <!-- {.md} -->
 
----
+提供了一套常用的图标集合。
+
 <!-- {.md} -->
 
 ## 如何使用
 <!-- {.md} -->
 
-方式一：<!-- {.md} -->
-通过<!-- {.md} -->`l-icon`标签来引用
-
-<!-- <icon-demo></icon-demo> -->
+方式一：
+通过`bjca-icon`标签来引用
 
 ::: demo
 
 ```html
-<l-icon name="cards-playing-outline" :size="16"></l-icon>
-<l-icon name="cards" :size="16"></l-icon>
-<l-icon name="close" :size="16"></l-icon>
+<bjca-icon class="bjca-icon-del"></bjca-icon>
 ```
 
 :::
 
+### 图标集合
 
+<ul class="icons-list">
+    <li class="icon">
+        <div class="icon-item">
+            <bjca-icon class="bjca-icon-del"></bjca-icon>
+        </div>
+        <span class="icon-name">bjca-icon-del</span>
+    </li>
+</ul>
 
-## Attributes
-<!-- {.md} -->
-| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+### Attributes
+|    参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | name     | 图标名称  | string  | -          |    -     |
 | color    | 图标颜色  | string  | -           |    -    |

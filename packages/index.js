@@ -1,7 +1,10 @@
 import Button from './button';
 import Icon from './icon';
+import searchButton from './searchButton';
+import resetButton from './resetButton';
+import listSearch from './listSeach';
+const components = [Button, Icon, listSearch];
 
-const components = [Button, Icon];
 
 const install = function (Vue) {
     if (install.installed) return;

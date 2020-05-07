@@ -66,6 +66,7 @@ export default {
       font-weight: normal;
       line-height: 1.5;
       cursor: pointer;
+      text-decoration: none;
     }
     .side-nav-group {
       display: block;

@@ -1,0 +1,33 @@
+@import "common/var.scss";
+
+
+[class^="bjca-icon-"], [class*=" bjca-icon-"] {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.bjca-icon-del { 
+    background: url('./icons/table-del-btn.png') no-repeat;
+ }
+
+
+.bjca-icon-loading {
+  animation: rotating 2s linear infinite;
+}
+
+.bjca-icon--right {
+  margin-left: 5px;
+}
+.bjca-icon--left {
+  margin-right: 5px;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

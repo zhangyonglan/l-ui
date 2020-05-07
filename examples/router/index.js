@@ -3,24 +3,28 @@ import Router from 'vue-router';
 import navConf from '@/nav.config.json';
 Vue.use(Router);
 
-let routes=[];
+let routes = [];
 
-Object.keys(navConf).forEach(header=>{
-    routes=routes.concat(navConf[header])
+Object.keys(navConf).forEach(header => {
+    routes = routes.concat(navConf[header])
 })
-let addComponent=router=>{
-    router.forEach(route=>{
-        if(route.items){
+let addComponent = router => {
+    router.forEach(route => {
+        if (route.items) {
             addComponent(route.items);
-            routes=routes.concat(route.items);
-        }else{
-            route.component=r=>require.ensure([],()=>r(require(`../docs/${route.name}.md`)))
+            routes = routes.concat(route.items);
+        } else {
+            if (route.type === 'component') {
+                route.component = r => require.ensure([], () => r(require(`../components/${route.name}.vue`)))
+            } else {
+                route.component = r => require.ensure([], () => r(require(`../docs/${route.name}.md`)))
+            }
         }
     })
 };
 addComponent(routes);
-let availableRoutes=routes.filter(item=>item.path);
+let availableRoutes = routes.filter(item => item.path);
 
 export default new Router({
-    routes:availableRoutes
+    routes: availableRoutes
 })
